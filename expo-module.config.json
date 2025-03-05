@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "apple",
+    "android",
+    "web"
+  ],
+  "apple": {
+    "modules": [
+      "ExpoAndroidSmsSenderModule"
+    ]
+  },
+  "android": {
+    "modules": [
+      "expo.modules.androidsmssender.ExpoAndroidSmsSenderModule"
+    ]
+  }
+}
