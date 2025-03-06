@@ -1,19 +1,25 @@
-import type { StyleProp, ViewStyle } from 'react-native';
+export type SimCard = {
+  /**
+   * Unique identifier for the SIM card (subscription ID).
+   */
+  id: number;
 
-export type OnLoadEventPayload = {
-  url: string;
-};
+  /**
+   * The name assigned to the SIM card by the system, typically
+   * corresponding to the carrier name or user-assigned label.
+   */
+  displayName: string;
 
-export type ExpoAndroidSmsSenderModuleEvents = {
-  onChange: (params: ChangeEventPayload) => void;
-};
+  /**
+   * The name of the mobile network carrier associated with the SIM.
+   */
+  carrierName: string;
 
-export type ChangeEventPayload = {
-  value: string;
-};
-
-export type ExpoAndroidSmsSenderViewProps = {
-  url: string;
-  onLoad: (event: { nativeEvent: OnLoadEventPayload }) => void;
-  style?: StyleProp<ViewStyle>;
+  /**
+   * The slot index where the SIM card is inserted.
+   * If the device has multiple SIM slots, this can be used to
+   * determine which slot the SIM belongs to.
+   * This may be `undefined` if the slot index cannot be determined.
+   */
+  slotIndex?: number;
 };
