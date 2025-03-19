@@ -1,6 +1,6 @@
 {
   "name": "expo-android-sms-sender",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Expo module for sending SMS messages on Android using native code. Built for React Native projects.",
   "main": "build/index.js",
   "types": "build/index.d.ts",

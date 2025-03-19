@@ -80,7 +80,7 @@ class ExpoAndroidSmsSenderModule : Module() {
   }
 
   private fun createSentPendingIntent(context: Context, promise: Promise): PendingIntent {
-    val intent = Intent(SMS_SENT_ACTION)
+    val intent = Intent(SMS_SENT_ACTION).setPackage(context.packageName)
     val pendingIntent = PendingIntent.getBroadcast(
       context,
       System.currentTimeMillis().toInt(),
